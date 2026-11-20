@@ -223,28 +223,39 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #fff;
 .rev small{display:block;font-weight:700;opacity:.85}
 
 /* profil */
-.dlgwrap{display:grid;gap:22px;justify-content:center;grid-template-columns:minmax(0,560px);padding:6px 0 20px}
-.dlg{position:relative;background:#1e1f21;color:#e8eef0;border:2px solid #1fa8b0;border-radius:22px;padding:18px 18px 20px;box-shadow:0 0 0 1px #0d3a40,0 0 28px rgba(31,168,176,.35),0 10px 30px rgba(0,0,0,.5);font-family:var(--body)}
-.dlg h2{margin:2px 34px 14px 0;text-align:center;font-family:Roboto,var(--body);font-size:1.12rem;color:#8fdcf0;font-weight:800;padding-left:34px}
+.dlgwrap{display:grid;gap:20px;justify-content:center;grid-template-columns:minmax(0,580px);padding:6px 0 24px}
+.dlg{position:relative;background:#1e1f21;color:#e8eef0;border:2px solid #1fa8b0;border-radius:22px;padding:18px 16px 20px;box-shadow:0 0 0 1px #0d3a40,0 0 28px rgba(31,168,176,.35),0 10px 30px rgba(0,0,0,.5);font-family:var(--body);overflow:hidden}
+.dlg h2{margin:2px 36px 14px;text-align:center;font-family:Roboto,var(--body);font-size:1.15rem;color:#8fdcf0;font-weight:800}
 .dlg-x{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:#3b4048;color:#ff6b6b;font-size:1.3rem;line-height:1;display:grid;place-items:center;cursor:pointer}
 .dlg-x:hover,.dlg-x:focus-visible{background:#4b525c}
 .dlg-in{background:#17181a;border:1px solid #3a3d42;border-radius:16px;padding:14px}
-.dev{display:flex;gap:14px;align-items:flex-start}
-.dev-ph{flex:0 0 104px;display:grid;justify-items:center;gap:8px}
-.dev-img{position:relative;width:104px;height:124px;border-radius:10px;border:3px solid #9aa3aa;box-shadow:0 0 0 1px #000}
-.dev-img img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;border-radius:7px;display:block}
+.dev{display:flex;gap:16px;align-items:flex-start}
+.dev-ph{flex:0 0 110px;display:grid;justify-items:center;gap:8px}
+.dev-img{position:relative;width:104px;height:124px;border-radius:12px;border:3px solid #9aa3aa;box-shadow:0 0 0 1px #000}
+.dev-img img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;border-radius:9px;display:block}
 .dev-ok{position:absolute;right:-8px;bottom:-8px;width:24px;height:24px;border-radius:50%;background:#0a6b1c;color:#fff;border:2px solid #cfd8dc;display:grid;place-items:center;font-size:.8rem;font-weight:800}
-.dev-pill{background:#4a1f0f;color:#fff;border-radius:999px;padding:3px 9px;font-size:.62rem;font-weight:800;text-align:center;border:1px solid #7a3a22}
-.dtbl{border-collapse:collapse;width:100%;font-size:.8rem}
-.dtbl th,.dtbl td{border:1px solid #cfd8dc;padding:8px 10px;text-align:left;vertical-align:middle;line-height:1.4}
+.dev-pill{background:#4a1f0f;color:#fff;border-radius:999px;padding:4px 12px;font-size:.72rem;font-weight:800;text-align:center;border:1px solid #7a3a22;white-space:nowrap}
+.dtbl{border-collapse:collapse;width:100%;font-size:.84rem;table-layout:fixed}
+.dtbl th,.dtbl td{border:1px solid #454b52;padding:8px 10px;text-align:left;vertical-align:top;line-height:1.45;word-wrap:break-word;overflow-wrap:break-word}
 .dtbl th{color:#8fdcf0;font-weight:800;width:34%;background:#1a2326}
-.dtbl td{color:#e8eef0;background:#1b1c1e;font-weight:600}
+.dtbl td{color:#e8eef0;background:#1b1c1e;font-weight:600;width:66%}
 .dtbl td b{color:#8fdcf0}
 .dtbl a{color:#8fdcf0;font-weight:800;text-decoration:none;display:inline-block;min-height:24px}
 .dtbl a:hover,.dtbl a:focus-visible{text-decoration:underline}
-.dev-tbl{flex:1;min-width:0;border:0}
-.mat-tbl th{width:36%}
-@media(max-width:380px){.dev{flex-direction:column;align-items:center}.dev-tbl{width:100%}}
+.dev-tbl{flex:1;min-width:0}
+.mat-tbl th{width:38%}
+.mat-tbl td{width:62%}
+
+@media(max-width:600px){
+  .dlg{padding:16px 12px 18px;border-radius:18px}
+  .dlg-in{padding:12px 10px}
+  .dev{flex-direction:column;align-items:center;gap:14px}
+  .dev-ph{flex:none;width:100%}
+  .dev-tbl{width:100%}
+  .dtbl{font-size:.82rem}
+  .dtbl th{width:35%;padding:7px 8px}
+  .dtbl td{width:65%;padding:7px 8px}
+}
 .field{display:grid;gap:4px;margin-bottom:10px;font-weight:800}
 .field input{font:inherit;padding:9px 12px;border:3px solid #b48a3a;border-radius:10px;background:#fffdf4;color:var(--ink);min-height:44px;width:100%}
 .idcard{background:linear-gradient(#2d6a54,#1d4a38);color:var(--parch);border:4px solid #0f2a22;border-radius:16px;padding:18px;display:grid;gap:10px;justify-items:center;text-align:center}
@@ -336,6 +347,22 @@ textarea.work{display:block;width:100%;resize:vertical;font:inherit;font-weight:
   .lk .formula{background:#fff!important;color:#000!important;border:2px solid #000}
   .ans{background:#fff!important}.lk-viz input[type=range]{display:none}
 }
+
+/* Tambahan responsif Android */
+html, body { overflow-x: hidden; max-width: 100%; }
+@media (max-width: 540px) {
+  body { padding-left: 10px; padding-right: 10px; }
+  .topbar { gap: 6px; }
+  .brand { font-size: 1.1rem; }
+  .chip { padding: 3px 10px 3px 6px; font-size: .9rem; }
+  .lk { padding: 14px 12px; }
+  .lk-sec { padding: 12px 10px; overflow-x: auto; }
+  .lk table { font-size: .82rem; }
+  .lk th, .lk td { padding: 5px 4px; }
+  .ans { width: 48px !important; font-size: .85rem; }
+  .board { padding: 14px 12px; }
+  .sign { font-size: 1.25rem; padding: 6px 18px; }
+}
 </style>
 
 <div class="app">
@@ -388,7 +415,6 @@ textarea.work{display:block;width:100%;resize:vertical;font:inherit;font-weight:
         <li><b class="n">3</b><span>Menyatakan suku ke-n barisan aritmatika dengan rumus <b>Uₙ = a + (n − 1)b</b> dan memakainya untuk menyelesaikan soal.</span></li>
         <li><b class="n">4</b><span>Menghitung jumlah n suku pertama deret aritmatika dengan <b>Sₙ</b> dan menghubungkannya dengan <b>Uₙ = Sₙ − Sₙ₋₁</b>.</span></li><li><b class="n">5</b><span>Memecahkan masalah kontekstual dan soal berpikir tingkat tinggi (HOTS) yang memuat barisan dan deret aritmatika.</span></li>
       </ul>
-      <p class="note">Ubah isi tujuan ini sesuai modul ajar atau Capaian Pembelajaran yang kamu pakai.</p>
     </div>
   </section>
 
@@ -539,6 +565,7 @@ textarea.work{display:block;width:100%;resize:vertical;font:inherit;font-weight:
             <tr><th>Jenis</th><td>Media Pembelajaran Interaktif (MPI)</td></tr>
             <tr><th>Instagram</th><td><a href="https://www.instagram.com/riqa.anisa" target="_blank" rel="noopener">@riqa.anisa</a></td></tr>
             <tr><th>TikTok</th><td><a href="https://www.tiktok.com/@gurugabut" target="_blank" rel="noopener">@gurugabut</a></td></tr>
+            <tr><th>Pengembangan</th><td>Dikembangkan dengan bantuan kecerdasan artifisial (AI) dalam penyusunan kode program, ilustrasi vektor, dan penyempurnaan interaktivitas media.</td></tr>
           </table>
         </div>
       </div>
@@ -1081,21 +1108,80 @@ function guideHTML(){
   if(!ks.length)return '<div class="guide good"><h3>Semua gembok terbuka!</h3><p style="margin:0;font-weight:700">Kamu menguasai semua topik. Tantang dirimu lagi di Level 5, atau cek papan peringkat.</p><div class="row" style="justify-content:flex-start;margin-top:8px"><button class="btn" data-lvl-go="5">Main Level 5</button></div></div>';
   return '<div class="guide"><h3>Langkah berikutnya</h3>'+ks.map(function(k){var T=TOP[k],g=by[k],L=LV[T.n-1];return '<div class="gstep"><p>'+(g.length>1?'Gembok ':'Gembok ')+jn(g)+' belum terbuka (topik: '+T.t+'). Ulangi Level '+T.n+' · '+L.name+'.</p><div class="row" style="justify-content:flex-start"><button class="btn" data-lvl-go="'+T.n+'">Ulangi Level '+T.n+'</button><button class="btn alt" data-go="materi">Baca materi</button></div></div>'}).join('')+'</div>';
 }
-/* papan peringkat: shared (db) bila tersedia, selalu ada cadangan di perangkat */
+/* papan peringkat: gabungan data perangkat & server, tampilkan semua siswa */
 var LBdb=null;
 try{if(window.claude&&claude.use)claude.use('db').then(function(d){LBdb=d}).catch(function(){})}catch(e){}
-function lbSubmit(nm,kl,sc){
-  var loc=lsGet('jp_lb',[]),f=loc.filter(function(x){return x.nama===nm&&x.kelas===kl})[0];
-  if(f){if(sc>f.skor)f.skor=sc}else loc.push({nama:nm,kelas:kl,skor:sc});
-  lsSet('jp_lb',loc.sort(function(a,b){return b.skor-a.skor}).slice(0,50));
-  if(!LBdb)return;
-  claude.use('user').then(function(u){return u&&u.id()}).then(function(id){if(!id)return;var r=LBdb.collection('lb').doc(id);return r.get().then(function(sn){var o=sn.exists?sn.data():null;if(o&&o.skor>=sc)return;return r.set({nama:nm,kelas:kl,skor:sc,tgl:Date.now()})})}).catch(function(){});
+
+function mergeLb(a,b){
+  var map={};
+  (a||[]).concat(b||[]).forEach(function(r){
+    if(!r||!r.nama)return;
+    var key=String(r.kelas||'').trim().toLowerCase()+'|'+String(r.nama).trim().toLowerCase();
+    var sc=Number(r.skor)||0;
+    if(!map[key]||sc>map[key].skor){
+      map[key]={nama:r.nama,kelas:r.kelas||'',skor:sc};
+    }
+  });
+  return Object.keys(map).map(function(k){return map[k]}).sort(function(x,y){return y.skor-x.skor});
 }
-function lbRows(rows,note){$('#lbBody').innerHTML='<h3>10 Besar Penjelajah Pola</h3><p class="note">'+note+'</p>'+(rows.length?'<ol class="lb">'+rows.map(function(r,i){return '<li><span class="rk">'+(i+1)+'</span><span>'+esc(String(r.nama))+(r.kelas?' <small>('+esc(String(r.kelas))+')</small>':'')+'</span><b>'+r.skor+'</b></li>'}).join('')+'</ol>':'<p style="font-weight:700">Belum ada skor. Selesaikan asesmen untuk masuk papan peringkat!</p>')}
+
+function lbSubmit(nm,kl,sc){
+  var loc=lsGet('jp_lb',[]);
+  var merged=mergeLb(loc,[{nama:nm,kelas:kl,skor:sc}]);
+  lsSet('jp_lb',merged);
+  if(!LBdb)return;
+  claude.use('user').then(function(u){return u&&u.id()}).then(function(id){
+    if(!id)return;
+    var r=LBdb.collection('lb').doc(id);
+    return r.get().then(function(sn){
+      var o=sn.exists?sn.data():null;
+      if(o&&o.skor>=sc)return;
+      return r.set({nama:nm,kelas:kl,skor:sc,tgl:Date.now()});
+    });
+  }).catch(function(){});
+}
+
+function lbRows(rows,note){
+  $('#lbBody').innerHTML=
+    '<h3>Papan Peringkat Penjelajah Pola</h3>'+
+    '<p class="note">'+note+'</p>'+
+    (rows.length
+      ? '<ol class="lb">'+rows.map(function(r,i){
+          var sc=Number(r.skor)||0;
+          var tampilSkor = sc < 70
+            ? '<span style="background:#fde6e0;color:#c8442f;border:2px solid #c8442f;border-radius:8px;padding:3px 10px;font-size:.85rem;font-family:var(--body);font-weight:800;white-space:nowrap">Perlu belajar lagi</span>'
+            : '<b>'+sc+'</b>';
+          return '<li><span class="rk">'+(i+1)+'</span><span>'+esc(String(r.nama))+(r.kelas?' <small>('+esc(String(r.kelas))+')</small>':'')+'</span>'+tampilSkor+'</li>';
+        }).join('')+'</ol>'
+      : '<p style="font-weight:700">Belum ada data. Selesaikan asesmen untuk masuk papan peringkat!</p>');
+}
+
 function renderLb(){
-  lbRows(lsGet('jp_lb',[]).slice(0,10),'Peringkat di perangkat ini.');
-  if(GURU.url){fetch(GURU.url+'?mode=lb').then(function(r){return r.json()}).then(function(j){if(j&&j.ok)lbRows(j.lb,'Peringkat semua siswa. Nama, kelas, dan skor terlihat oleh semua yang membuka media ini.')}).catch(function(){})}
-  else if(LBdb)LBdb.collection('lb').orderBy('skor','desc').limit(10).get().then(function(q){lbRows(q.docs.map(function(d){return d.data()}),'Peringkat semua siswa. Nama, kelas, dan skor terlihat oleh semua yang membuka media ini.')}).catch(function(){});
+  var localRows=lsGet('jp_lb',[]);
+  var ket='Menampilkan seluruh siswa yang telah mengerjakan asesmen.';
+  lbRows(mergeLb(localRows,[]),ket);
+
+  if(GURU.url){
+    fetch(GURU.url+'?mode=lb')
+      .then(function(r){return r.json()})
+      .then(function(j){
+        if(j&&j.ok&&Array.isArray(j.lb)){
+          var gabung=mergeLb(lsGet('jp_lb',[]),j.lb);
+          lsSet('jp_lb',gabung);
+          lbRows(gabung,ket);
+        }
+      })
+      .catch(function(){});
+  } else if(LBdb){
+    LBdb.collection('lb').orderBy('skor','desc').get()
+      .then(function(q){
+        var srv=q.docs.map(function(d){return d.data()});
+        var gabung=mergeLb(lsGet('jp_lb',[]),srv);
+        lsSet('jp_lb',gabung);
+        lbRows(gabung,ket);
+      })
+      .catch(function(){});
+  }
 }
 
 function attemptRec(){var w=[];A.items.forEach(function(it,i){if(A.ans[i]!==it.a)w.push(i+1)});var c=function(x){return String(x).replace(/[|\[\]]/g,' ')};return {nama:c(A.name||'(tanpa nama)'),kelas:c(A.kelas||'-'),b:A.items.length-w.length,n:A.items.length,salah:w}}
