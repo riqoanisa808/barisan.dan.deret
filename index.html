@@ -1051,7 +1051,7 @@ $('#v-hasil').addEventListener('click',function(e){
 /* ---------- rekap ke Google Form / Google Sheet ---------- */
 /* Isi REKAP dengan hasil dari skrip setup_rekap_nilai.gs (lihat petunjuk). Biarkan kosong untuk menonaktifkan. */
 /* Isi GURU.url dengan URL aplikasi web (/exec) dari setup_rekap_nilai.gs. */
-var GURU={url:'https://script.google.com/macros/s/AKfycbyiBv64E_eA7-KNHfVnbyH-EdeRTPS5dOaURevo2h_UtK8Dr5rzsxKBlInEhsD43BQK/exec'};
+var GURU={url:'Https://script.google.com/macros/s/AKfycbw7lV07Q4f-D5jEbeWWNlTd5KEJAe_Q-E174b06pENMPvhMNU20un0xzaswZ876Kf1f/exec'};
 var REKAP={url:'https://docs.google.com/forms/d/e/1FAIpQLScP4QJfKH1aKzovgOI1jImPGkDg_gkG138K4srbcjAGo16DOg/formResponse',entry:{jenis:'entry.1158280537',nama:'entry.1667022598',kelas:'entry.417979498',skor:'entry.189710494',ringkasan:'entry.2001611694'}};
 function rekapOn(){return !!(REKAP.url&&REKAP.entry.nama)}
 function rekapMsg(s){return s==='wait'?'Mengirim hasil ke guru…':s==='ok'?'Hasil sudah dikirim ke guru.':s==='q'?'Belum ada koneksi internet. Hasil disimpan dan akan dikirim otomatis saat tersambung.':''}
